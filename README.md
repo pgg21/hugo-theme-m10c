@@ -1,6 +1,10 @@
+# Introduction
+
+A fork of [vaga's](https://github.com/vaga) theme [m10c](https://themes.gohugo.io/themes/hugo-theme-m10c/) for [hugo](https://gohugo.io/). The initial intention of this fork was to add useful partials that are not present in the upstream repo — e.g. collapsible lists. No attempt will be made to merge these changes back to upstream, since the upstream is explicitly intended to be a minimalistic theme, and I doubt the changes I make here will be useful to anyone but myself.
+
 # m10c theme
 
-![Intro](https://github.com/vaga/hugo-theme-m10c/blob/master/images/cover.png)
+![Intro](https://github.com/pgg21/hugo-theme-m10c/blob/master/images/cover.png)
 
 A Hugo minimalistic theme for bloggers
 
@@ -27,7 +31,7 @@ $ hugo new site [path]
 Clone this repository into `themes/` directory:
 ```bash
 $ cd [path]
-$ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
+$ git clone https://github.com/pgg21/hugo-theme-m10c.git themes/m10c
 ```
 
 Add this line  in the `config.toml` file:
@@ -62,7 +66,7 @@ To add a social link, add the following lines in `params`:
 [[params.social]]
   icon = "github"
   name = "My Github"
-  url = "https://github.com/vaga"
+  url = "https://github.com/pgg21"
 ```
 
 To change theme colors, add the following lines in `params`:
