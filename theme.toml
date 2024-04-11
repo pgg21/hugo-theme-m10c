@@ -1,8 +1,8 @@
 name = "m10c"
 license = "MIT"
-licenselink = "https://github.com/vaga/hugo-theme-m10c/blob/master/LICENSE.md"
+licenselink = "https://github.com/pgg21/hugo-theme-m10c/blob/master/LICENSE.md"
 description = "A minimalistic (m10c) theme for bloggers"
-homepage = "https://github.com/vaga/hugo-theme-m10c"
+homepage = "https://github.com/pgg21/hugo-theme-m10c"
 tags = ["blog", "minimalistic", "minimal", "responsive", "dark"]
 features = [
   "minimalistic blog",
@@ -11,5 +11,5 @@ features = [
 ]
 
 [author]
-  name = "vaga"
-  homepage = "https://vaga.io"
+  name = "pgg21"
+  homepage = "https://github.com/pgg21"
