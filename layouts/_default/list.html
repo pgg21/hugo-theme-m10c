@@ -11,6 +11,9 @@
             <span class="posts-list-item-separator">-</span>
             {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
             {{ .ReadingTime }} min read
+            <span class="posts-list-item-separator">-</span>
+            {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
+            <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
           </span>
         </li>
       {{ end }}
