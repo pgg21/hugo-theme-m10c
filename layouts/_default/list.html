@@ -13,7 +13,11 @@
             {{ .ReadingTime }} min read
             <span class="posts-list-item-separator">-</span>
             {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
-            <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- range .Params.tags -}}
+              {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+                <a class="tag" href="{{ .Permalink }}">{{ .Data.Term }}</a>
+              {{ end }}
+            {{- end }}
           </span>
         </li>
       {{ end }}
