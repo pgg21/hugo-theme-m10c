@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
   color: $lightest-color;
 }
 
+b, strong, i, em {
+  color: $lighter-color;
+}
+
 a {
   color: $primary-color;
   transition: color 0.35s;
