@@ -41,4 +41,20 @@
   img {
     max-width: 100%;
   }
+
+  counter-reset: h1-counter;
+
+  h1 {
+    counter-reset: h2-counter;
+  }
+  
+  h1:before {
+    counter-increment: h1-counter;
+    content: counter(h1-counter) ". ";
+  }
+  
+  h2:before {
+    counter-increment: h2-counter;
+    content: counter(h1-counter) "." counter(h2-counter) ". ";
+  }
 }
