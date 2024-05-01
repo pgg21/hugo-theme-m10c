@@ -60,3 +60,13 @@
     content: counter(h1-counter) "." counter(h2-counter) ". ";
   }
 }
+
+.unnumbered-sections {
+  h1:before {
+    content: "⚬ ";
+  }
+
+  h2:before {
+    content: "⚭ ";
+  }
+}

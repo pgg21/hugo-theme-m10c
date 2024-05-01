@@ -25,7 +25,7 @@
       </div>
       {{- end }}
     </header>
-    <div class="post-content{{ if .Params.numberedSections }} numbered-sections{{ end }}">
+    <div class="post-content{{ if .Params.numberedSections }} numbered-sections{{ else }} unnumbered-sections{{ end }}">
       {{ .Content }}
     </div>
     <div class="post-footer">
