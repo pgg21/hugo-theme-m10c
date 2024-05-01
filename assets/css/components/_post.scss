@@ -41,7 +41,9 @@
   img {
     max-width: 100%;
   }
+}
 
+.numbered-sections {
   counter-reset: h1-counter;
 
   h1 {
