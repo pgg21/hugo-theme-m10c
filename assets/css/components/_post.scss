@@ -49,12 +49,12 @@
   h1 {
     counter-reset: h2-counter;
   }
-  
+
   h1:before {
     counter-increment: h1-counter;
     content: counter(h1-counter) ". ";
   }
-  
+
   h2:before {
     counter-increment: h2-counter;
     content: counter(h1-counter) "." counter(h2-counter) ". ";
@@ -69,4 +69,11 @@
   h2:before {
     content: "⚭ ";
   }
+}
+
+#toc-container {
+  border: white 1px solid;
+  margin-top: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
 }

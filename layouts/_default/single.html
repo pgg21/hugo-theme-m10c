@@ -26,7 +26,8 @@
       {{- end }}
     </header>
     {{- if .Params.toc }}
-    <div>
+    <div id="toc-container">
+      <p>TOC:</p>
       {{ .TableOfContents }}
     </div>
     {{- end }}
