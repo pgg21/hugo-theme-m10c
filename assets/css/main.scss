@@ -8,6 +8,8 @@ $lightest-color: {{ .Site.Params.style.lightestColor | default "#ffffff" }};
 $primary-color: {{ .Site.Params.style.primaryColor | default "#57cc8a" }};
 $secondary-color: {{ .Site.Params.style.secondaryColor | default "#fffacd" }};
 
+$warning-color: {{ .Site.Params.style.warningColor | default "#ff5e61" }};
+
 @import 'base';
 
 @import 'components/app';
