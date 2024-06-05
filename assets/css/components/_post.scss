@@ -81,3 +81,20 @@
 .todo {
   color: $warning-color;
 }
+
+table {
+  border-top: $light-color 2px solid;
+  border-bottom: $light-color 2px solid;
+  border-collapse: collapse;
+
+  th {
+    border-bottom: $light-color 1px solid;
+    padding: 10px;
+  }
+
+  td {
+    padding: 10px;
+  }
+}
+
+
