@@ -39,6 +39,10 @@ code {
   font-family: monospace,monospace;
   font-size: 1em;
   color: $secondary-color;
+  background-color: $darkest-color;
+  padding: 1px 5px 3px 5px;
+  box-decoration-break: clone;
+  border-radius: 5px;
 
   // Fixes iOS font sizing anomaly
   text-size-adjust: 100%;
