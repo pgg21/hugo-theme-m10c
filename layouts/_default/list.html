@@ -3,7 +3,7 @@
     {{ if eq .Kind "term" }}
       <h1 class="taxonomy-title">Tag: {{ .Data.Term }}</h1>
     {{ else }}
-      <h1 class="post-title">{{ .Title }}</h1>
+      <h1 class="post-title">{{ .Params.Title | default .Title }}</h1>
     {{ end }}
     <ul class="posts-list">
       {{ range where .Paginator.Pages "Type" "!=" "page" }}
