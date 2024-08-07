@@ -5,6 +5,12 @@
       {{- if ne .Type "page" }}
       <div class="post-meta">
         <div>
+          {{ partial "icon.html" (dict "ctx" $ "name" "folder") }}
+          {{ with .Site.GetPage "section" .Section }}
+            {{ .Params.title | default .Title }}
+          {{ end }}
+        </div>
+        <div>
           {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
           {{ .PublishDate.Format "Jan 2, 2006" }}
         </div>
