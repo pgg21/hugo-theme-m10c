@@ -6,9 +6,9 @@
       <h1 class="post-title">{{ .Params.title | default .Title }}</h1>
     {{ end }}
     <ul class="posts-list">
-      {{ range where .Paginator.Pages "Type" "!=" "page" }}
+      {{ range $index, $page := where .Paginator.Pages "Type" "!=" "page" }}
         <li class="posts-list-item">
-          <a class="posts-list-item-title" href="{{ .Permalink }}">{{ .Title }}</a>
+          <a class="posts-list-item-title" href="{{ .Permalink }}">{{ add $index 1 }}: {{ .Title }}</a>
           <span class="posts-list-item-description">
             {{ partial "icon.html" (dict "ctx" $ "name" "folder") }}
             {{ with .Site.GetPage "section" .Section }}
