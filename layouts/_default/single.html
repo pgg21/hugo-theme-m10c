@@ -10,10 +10,12 @@
             {{ .Params.title | default .Title }}
           {{ end }}
         </div>
-        <div>
-          {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
-          {{ .PublishDate.Format "Jan 2, 2006" }}
-        </div>
+        {{ if isset .Params "date" }}
+          <div>
+            {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
+            {{ .PublishDate.Format "Jan 2, 2006" }}
+          </div>
+        {{ end }}
         <div>
           {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
           {{ .ReadingTime }} min read

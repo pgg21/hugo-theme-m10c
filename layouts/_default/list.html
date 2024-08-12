@@ -15,19 +15,23 @@
             {{ with .Site.GetPage "section" .Section }}
               {{ .Params.title | default .Title }}
             {{ end }}
-            <span class="posts-list-item-separator">-</span>
-            {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
-            {{ .PublishDate.Format "Jan 2, 2006" }}
+            {{ if isset .Params "date" }}
+              <span class="posts-list-item-separator">-</span>
+              {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
+              {{ .PublishDate.Format "Jan 2, 2006" }}
+            {{ end }}
             <span class="posts-list-item-separator">-</span>
             {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
             {{ .ReadingTime }} min read
-            <span class="posts-list-item-separator">-</span>
-            {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
-            {{- range .Params.tags -}}
-              {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
-                <a class="tag" href="{{ .Permalink }}">{{ .Data.Term }}</a>
-              {{ end }}
-            {{- end }}
+            {{ if isset .Params "tags" }}
+              <span class="posts-list-item-separator">-</span>
+              {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
+              {{- range .Params.tags -}}
+                {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+                  <a class="tag" href="{{ .Permalink }}">{{ .Data.Term }}</a>
+                {{ end }}
+              {{- end }}
+            {{ end }}
           </span>
         </li>
       {{ end }}
