@@ -5,6 +5,7 @@
     {{ else }}
       <h1 class="post-title">{{ .Params.title | default .Title }}</h1>
     {{ end }}
+  <p>{{ .Params.description | default "" }}</p>
     <ul class="posts-list">
       {{ range $index, $page := where .Paginator.Pages "Type" "!=" "page" }}
         <li class="posts-list-item">
