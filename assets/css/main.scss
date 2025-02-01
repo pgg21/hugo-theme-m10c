@@ -5,7 +5,7 @@ $light-color: {{ .Site.Params.style.lightColor | default "#afbac4" }};
 $lighter-color: {{ .Site.Params.style.lighterColor | default "#d1d8de" }};
 $lightest-color: {{ .Site.Params.style.lightestColor | default "#ffffff" }};
 
-$primary-color: {{ .Site.Params.style.primaryColor | default "#57cc8a" }};
+$primary-color: {{ .Site.Params.style.primaryColor | default "#57dd8a" }};
 $secondary-color: {{ .Site.Params.style.secondaryColor | default "#fffacd" }};
 
 $warning-color: {{ .Site.Params.style.warningColor | default "#ff5e61" }};
