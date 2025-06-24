@@ -1,7 +1,11 @@
 .app-header {
   padding: 2.5em;
   background: $darkest-color;
-  text-align: center;
+  text-align: left;
+
+  .app-header-menu {
+    padding-left: 30px;
+  }
 }
 
 .app-header-avatar {
