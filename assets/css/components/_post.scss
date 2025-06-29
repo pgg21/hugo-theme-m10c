@@ -83,17 +83,26 @@
 }
 
 table {
-  border-top: $light-color 2px solid;
-  border-bottom: $light-color 2px solid;
+  border-top: $light-color 1px solid;
+  border-bottom: $light-color 1px solid;
   border-collapse: collapse;
 
   th {
     border-bottom: $light-color 1px solid;
     padding: 10px;
+    background-color: $darker-color;
   }
 
   td {
     padding: 10px;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $darkest-color;
+  }
+
+  tr:nth-child(even) {
+    background-color: $darker-color;
   }
 }
 
